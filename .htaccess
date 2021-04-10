@@ -1,0 +1,54 @@
+# Bảo vệ file .htaccess
+<Files .htaccess>
+Order Allow,Deny
+Deny from all
+</Files>
+
+ErrorDocument 404 http://foodie.getenjoyment.net/templates/404.htm
+
+# Rewrite url
+RewriteEngine on
+# Url bài viết
+RewriteRule ^([a-zA-Z0-9_-]+)-([0-9]+).html$ index.php?slug_post=$1&id=$2
+RewriteRule ^([a-zA-Z0-9_-]+)-([0-9]+).html/$ index.php?slug_post=$1&id=$2
+
+# Url thành viên
+RewriteRule ^profile/([a-zA-Z0-9_-]+)&ci=([0-9]+)$ index.php?slug_cus=$1&id=$2
+RewriteRule ^profile/([a-zA-Z0-9_-]+)&ci=([0-9]+)/$ index.php?slug_cus=$1&id=$2
+
+# Url chuyên mục
+RewriteRule ^species/([a-zA-Z0-9_-]+)&page=([0-9]+)$ index.php?slug_cate=$1&page=$2
+RewriteRule ^species/([a-zA-Z0-9_-]+)&page=([0-9]+)/$ index.php?slug_cate=$1&page=$2
+
+
+# Url phân trang kết quả tìm kiếm
+RewriteRule ^search/key=([a-zA-Z0-9_-]+)&page=([0-9]+)$ index.php?search=$1&page=$2
+RewriteRule ^search/key=([a-zA-Z0-9_-]+)&page=([0-9]+)/$ index.php?search=$1&page=$2
+
+# Url đăng nhập đăng kí
+RewriteRule ^sign-([a-zA-Z0-9_-]+)$ index.php?sign=$1
+RewriteRule ^sign-([a-zA-Z0-9_-]+)/$ index.php?sign=$1
+
+# Url điều hướng footer
+RewriteRule ^info/([a-zA-Z0-9_-]+)$ index.php?slug_if=$1
+RewriteRule ^info/([a-zA-Z0-9_-]+)/$ index.php?slug_if=$1
+
+# Url đơn hàng
+RewriteRule ^order/([a-zA-Z0-9_-]+)-([0-9]+)$ index.php?slug_sp=$1&id=$2
+RewriteRule ^order/([a-zA-Z0-9_-]+)-([0-9]+)/$ index.php?slug_sp=$1&id=$2
+
+# Url giỏ hàng
+RewriteRule ^mybasket/([a-zA-Z0-9_-]+)$ index.php?idkh=$1
+RewriteRule ^mybasket/([a-zA-Z0-9_-]+)/$ index.php?idkh=$1
+
+# Url đăng xuất
+RewriteRule ^signout=([a-zA-Z0-9_-]+)$ index.php?signout=$1
+RewriteRule ^signout=([a-zA-Z0-9_-]+)/$ index.php?signout=$1
+
+# Url xác thực tài khoản
+RewriteRule ^verify=([a-zA-Z0-9_-]+)$ index.php?vcode=$1
+RewriteRule ^verify=([a-zA-Z0-9_-]+)/$ index.php?vcode=$1
+
+# Url xác thực tài khoản
+RewriteRule ^reset/([a-zA-Z0-9_-]+)&step=([a-zA-Z0-9_-]+)$ index.php?repass=$1&step=$2
+RewriteRule ^reset/([a-zA-Z0-9_-]+)&step=([a-zA-Z0-9_-]+)/$ index.php?repass=$1&step=$2

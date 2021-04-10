@@ -1,0 +1,61 @@
+
+@import "foodie.def.scss";
+
+.active {
+	background-color: rgb(42, 185, 204) !important;
+}
+.page-header {
+	& h1, & a {
+		font-size: $font-lg;
+	}
+}
+.menu_admin {
+	& .row:nth-child(1) {
+		font-size: $font-md;
+		@include flex(column);
+		padding: 3rem;
+		& img, & p {
+			margin: 0 auto;
+		}
+		& img {
+			@include w-h(10rem, 10rem);
+			@include border-radius(999px);
+		}
+		& p {
+			@include padding(null, 1rem, 0, 0, 0);
+		}
+	}
+	& .row:nth-child(2) {
+		@include margin(null, 1rem, 0, 4rem, 0);
+		& div {
+			border: 1px solid white;
+			height: 15rem;
+			text-align: center;
+			@include margin(0);
+			@include padding(0);
+			position: relative;
+			background-color: rgb(43, 198, 219);
+			&:hover {
+				background-color: rgb(42, 185, 204);
+				@include transform(scale(1.01, 1.01));
+				z-index: 999;
+			}
+		}
+		& a {
+			color: black;
+			text-decoration: none;
+			@include w-h(100%, 100%);
+			display: block;
+			& span {
+				font-size: $font-md;
+				&:nth-child(1) {
+					padding: 3rem;
+				}
+				&:nth-child(2) {
+					@include centerAbsolute("both");
+					white-space: nowrap;
+				}
+			}
+		}
+	}
+}

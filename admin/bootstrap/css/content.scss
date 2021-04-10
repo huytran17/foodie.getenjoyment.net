@@ -1,0 +1,94 @@
+
+@import "foodie.def.scss";
+
+.header-br {
+	display: none;
+}
+.card-avt-prf {
+	.form-group:last-child {
+		max-width: 50% !important;
+	}
+}
+#formSignIn {
+	width: 30%;
+}
+hr {
+	display: block;
+	margin: 0 auto;
+	background-color: rgb(137, 241, 255);
+}
+.content * {
+  font-size: 1.5rem !important; }
+
+.btn, input {
+  font-size: 1.5rem !important; }
+ label {
+ 	font-weight: bold;
+ 	margin: 1rem 0;
+ }
+ .badge {
+ 	font-size: 1rem !important;
+ }
+ .card {
+ 	margin-top: 3rem;
+ }
+ .content {
+ 	margin-bottom: 5rem !important;
+ }
+ table {
+ 	margin: 2rem 0 0 0 !important;
+ }
+ h4 {
+ 	margin: 0 0 2rem 0 !important;
+ }
+ .pagination {
+ 	 a, span {
+ 	 	color: black !important;
+ 	 	&:focus {
+ 	 		box-shadow: none !important;
+ 	 	}
+ 	 }
+ 	 & a {
+ 	 	border: 1px solid rgb(78, 202, 219);
+ 	 }
+ 	 & .paging-active {
+	 	& span {
+	 		background-color: black !important;
+	 		color: white !important;
+	 	}
+	 }
+ }
+
+@include maxWidth(338px) {
+	.header-br {
+		display: block;
+	}
+}
+@include maxWidth(989px) {
+	#formSignIn {
+		width: 50%;
+	}
+}
+.table-responsive {
+	overflow: auto !important;
+	& .table {
+		min-width: 930px !important;
+	}
+}
+.slide-img {
+	cursor: pointer;
+	.span {
+		position: absolute;
+		top: 0;
+		right: 0;
+		text-align: right;
+		display: none;
+		z-index: 999;
+		width: 100%;
+		height: 100%;
+	}
+	&:hover .span {
+		display: block !important;
+		background-color: rgba(249, 247, 247, .2);
+	}
+}

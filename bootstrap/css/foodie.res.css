@@ -1,0 +1,43 @@
+@font-face {
+  font-family: Helvetica;
+  src: url(../fonts/Helvetica/Helvetica400.ttf); }
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box; }
+
+body {
+  font-family: Helvetica !important;
+  font-size: 62.5%;
+  overflow-x: hidden; }
+
+.cont {
+  max-width: 76%;
+  margin-left: auto;
+  margin-right: auto; }
+
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0; }
+
+/* Firefox */
+input[type=number] {
+  -moz-appearance: textfield; }
+
+.btn {
+  border-radius: 0 !important; }
+  .btn:focus {
+    box-shadow: none !important;
+    outline: 0 !important; }
+
+::-moz-selection {
+  /* Code for Firefox */
+  color: white;
+  background-color: #ffc107; }
+
+::selection {
+  color: white;
+  background-color: #ffc107; }
+
+/*# sourceMappingURL=foodie.res.css.map */

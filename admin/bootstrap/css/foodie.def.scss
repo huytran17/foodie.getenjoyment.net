@@ -1,0 +1,76 @@
+$font-sm: 1.5rem;
+$font-md: 2.5rem;
+$font-lg: 3.4rem;
+$font-xl: 4.2rem;
+
+@mixin minWidth($breakpoint) {
+  	@media only screen and (min-width: $breakpoint) { @content; }
+}
+ 
+@mixin maxWidth($breakpoint) {
+  	@media only screen and (max-width: $breakpoint) { @content; }
+}
+@mixin w-h ($w, $h) {
+	width: $w;
+	height: $h;
+}
+@mixin m-p ($m, $p) {
+	margin: $m;
+	padding: $p;
+}
+@mixin padding($all: null, $top: $all, $right: $all, $bottom: $all, $left: $all) {
+	padding-top: $top;
+	padding-right: $right;
+	padding-bottom: $bottom;
+	padding-left: $left;
+}
+@mixin margin($all: null, $top: $all, $right: $all, $bottom: $all, $left: $all) {
+	margin-top: $top;
+	margin-right: $right;
+	margin-bottom: $bottom;
+	margin-left: $left;
+}
+@mixin transform($property) {
+  -webkit-transform: $property;
+  -ms-transform: $property;
+  transform: $property;
+}
+@mixin centerAbsolute($pos) {
+ 	position: absolute;
+	@if $pos == "both" {
+	  	top: 50%;
+	  	left: 50%;
+	  	@include transform(translate(-50%, -50%));
+	} @else if $pos == "left" {
+	 	left: 50%;
+	 	@include transform(translateX(-50%));
+	} @else if $pos == "top" {
+	  	top: 50%;
+	  	@include transform(translateY(-50%));
+	}
+}
+@mixin flex($direction: row, $content: null , $items: null, $wrap: null) {
+	display: flex;
+	flex-direction: $direction;
+	justify-content: $content;
+	align-items: $items;
+	flex-wrap: $wrap;
+}
+@mixin minWidth($breakpoint) {
+  	@media only screen and (min-width: $breakpoint) { @content; }
+}
+ 
+@mixin maxWidth($breakpoint) {
+  	@media only screen and (max-width: $breakpoint) { @content; }
+}
+@mixin border-radius($all: null, $tl: $all, $tr: $all, $btl: $all, $btr: $all) {
+  	border-top-left-radius: $tl;
+  	border-top-right-radius: $tr ;
+  	border-bottom-right-radius: $btr;
+  	border-bottom-left-radius: $btl;
+}
+@mixin transform($property) {
+  -webkit-transform: $property;
+  -ms-transform: $property;
+  transform: $property;
+}

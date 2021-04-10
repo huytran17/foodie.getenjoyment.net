@@ -1,0 +1,76 @@
+.header-br {
+  display: none; }
+
+.card-avt-prf .form-group:last-child {
+  max-width: 50% !important; }
+
+#formSignIn {
+  width: 30%; }
+
+hr {
+  display: block;
+  margin: 0 auto;
+  background-color: #89f1ff; }
+
+.content * {
+  font-size: 1.5rem !important; }
+
+.btn, input {
+  font-size: 1.5rem !important; }
+
+label {
+  font-weight: bold;
+  margin: 1rem 0; }
+
+.badge {
+  font-size: 1rem !important; }
+
+.card {
+  margin-top: 3rem; }
+
+.content {
+  margin-bottom: 5rem !important; }
+
+table {
+  margin: 2rem 0 0 0 !important; }
+
+h4 {
+  margin: 0 0 2rem 0 !important; }
+
+.pagination a, .pagination span {
+  color: black !important; }
+  .pagination a:focus, .pagination span:focus {
+    box-shadow: none !important; }
+.pagination a {
+  border: 1px solid #4ecadb; }
+.pagination .paging-active span {
+  background-color: black !important;
+  color: white !important; }
+
+@media only screen and (max-width: 338px) {
+  .header-br {
+    display: block; } }
+@media only screen and (max-width: 989px) {
+  #formSignIn {
+    width: 50%; } }
+.table-responsive {
+  overflow: auto !important; }
+  .table-responsive .table {
+    min-width: 930px !important; }
+
+.slide-img {
+  cursor: pointer; }
+  .slide-img .span {
+    position: absolute;
+    top: 0;
+    right: 0;
+    text-align: right;
+    display: none;
+    z-index: 999;
+    width: 100%;
+    height: 100%; }
+  .slide-img:hover .span {
+    display: block !important;
+    background-color: rgba(249, 247, 247, 0.2); }
+
+/*# sourceMappingURL=content.css.map */
